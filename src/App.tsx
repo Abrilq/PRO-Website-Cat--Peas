@@ -209,7 +209,7 @@ function Footer() {
 function ProductCard({ product, index = 0 }: { product: Product; index?: number }) {
   return (
     <Link to={`/products/${product.id}`} className="product-card" style={{ animationDelay: `${index * 45}ms` }}>
-      <div className="product-image-wrap"><img src={`/${product.image}`} alt={`${product.brand} ${product.name}`} loading="lazy" /><span className="card-action"><Icon name="arrow" /></span>{product.featured && <span className="product-tag">{product.brand}</span>}</div>
+      <div className="product-image-wrap"><img src={`/${product.image}`} alt={`${product.brand} ${product.name}`} loading="lazy" /><span className="card-action"><Icon name="arrow" /></span><span className="product-tag">{product.brand}</span></div>
       <div className="product-card-copy"><div><span className="product-brand">{product.brand}</span><h3>{product.name}</h3></div><span className="product-price">{formatPrice(product.price)}</span></div>
     </Link>
   );
